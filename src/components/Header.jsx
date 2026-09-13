@@ -1,17 +1,11 @@
 const RegisterButton = ({ variant, className }) => (
   <Button
-    variant="outline"
+    
     onClick={handleClick}
-    className={`!flex !flex-row gap-1 justify-center items-center
-      !rounded-full !border-0
-      bg-[#6B7FA3] text-white
-      hover:bg-[#6B7FA3] hover:text-white
-      dark:bg-offwhite dark:text-[#1D1D1F]
-      dark:hover:bg-offwhite dark:hover:text-[#1D1D1F]
-      px-3 py-1
-      hover:underline
-      decoration-white dark:decoration-[#1D1D1F]
-      transition-colors
+   className={`!h-auto !w-auto !rounded-full !border-0 !bg-[#6B7FA3] !px-3 !py-1 !shadow-none
+    !text-white hover:!bg-[#6B7FA3] hover:!text-white
+    dark:!bg-offwhite dark:!text-[#1D1D1F]
+    dark:hover:!bg-offwhite dark:hover:!text-[#1D1D1F]
       ${className || ""}`}
   >
     <span className="text-center font-spacemono text-[0.875rem] not-italic font-bold leading-5 tracking-[0.35px] uppercase">
