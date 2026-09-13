@@ -56,7 +56,7 @@ const Header = memo(() => {
           <img src={tfbadge} alt="Transfinitte Badge" className="dark:invert-0 invert transition-all w-auto h-5 sm:h-6" />
         </Suspense>
         <div className="flex items-center gap-2.5 sm:gap-3">
-          <ThemeToggle />
+      
           <RegisterButton variant="outline" className="px-3 py-1 text-xs sm:text-sm" />
         </div>
       </div>
@@ -82,7 +82,6 @@ const Header = memo(() => {
       </div>
       <div className="w-fit h-fit flex gap-3 lg:gap-6 justify-center items-center">
         <CalendarButton />
-        <ThemeToggle />
         <RegisterButton variant="outline" className="px-4 lg:px-5 py-2" />
       </div>
     </div>
