@@ -1,40 +1,37 @@
-import React, { lazy, memo, Suspense } from "react";
-import { arrowbl, arrowwh, numbersvg, tfbadge } from "../assets";
-import { toast } from "sonner";
-import { Button } from "./ui/button";
-import { GOOGLE_CALENDAR_URL } from "../constants";
-
-const Flip = lazy(() => import("./Flip"));
-
-const Header = memo(() => {
-  const handleClick = () => {
-    toast("Coming Soon", {
-      description: "Wednesday, 23 October 2026, 9:00 AM",
-      className: "font-spacemono",
-    });
-  };
-
- const RegisterButton = ({ variant, className }) => (
+const RegisterButton = ({ variant, className }) => (
   <Button
-    variant={variant}
+    variant="outline"
     onClick={handleClick}
-    className={`flex flex-row gap-1 justify-center items-center
+    className={`!flex !flex-row gap-1 justify-center items-center
+      !rounded-full !border-0
       bg-[#6B7FA3] text-white
+      hover:bg-[#6B7FA3] hover:text-white
       dark:bg-offwhite dark:text-[#1D1D1F]
-      px-2 py-0 rounded-full
+      dark:hover:bg-offwhite dark:hover:text-[#1D1D1F]
+      px-3 py-1
       hover:underline
       decoration-white dark:decoration-[#1D1D1F]
       transition-colors
-      ${className}`}
+      ${className || ""}`}
   >
-    <div className="text-center font-spacemono text-[0.875rem] not-italic font-bold leading-5 tracking-[0.35px] uppercase">
+    <span className="text-center font-spacemono text-[0.875rem] not-italic font-bold leading-5 tracking-[0.35px] uppercase">
       REGISTER
-    </div>
+    </span>
 
-    <div>
+    <span>
       <img
         src={arrowwh}
         className="max-w-none w-fit dark:hidden"
+        alt="arrow"
+      />
+      <img
+        src={arrowbl}
+        className="max-w-none w-fit hidden dark:block"
+        alt="arrow"
+      />
+    </span>
+  </Button>
+);        className="max-w-none w-fit dark:hidden"
         alt="arrow"
       />
       <img
