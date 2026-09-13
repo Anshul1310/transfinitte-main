@@ -26,7 +26,7 @@ const TestimonialsMobile = memo(() => (
           Testimonials
         </div>
         <div className="flex w-auto h-auto flex-col justify-center text-[#6B6B6B] dark:text-[#A1A1A1] font-spacemono text-[18px] not-italic font-normal leading-[28px] transition-colors">
-          (8)
+          (7)
         </div>
       </div>
 
@@ -70,7 +70,7 @@ const TestimonialsDesktop = memo(() => (
           Testimonials
         </div>
         <div className="flex w-auto h-auto flex-col justify-center text-[#6B6B6B] dark:text-[#A1A1A1] font-medium not-italic font-spacemono leading-[28px] transition-colors">
-          (8)
+          (7)
         </div>
       </div>
 

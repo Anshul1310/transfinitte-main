@@ -6,7 +6,6 @@ const Timer = lazy(() => import("./components/Timer"));
 const AboutUs = lazy(() => import("./components/AboutUs"));
 const Domains = lazy(() => import("./components/DomainsPrize"));
 const Timeline = lazy(() => import("./components/Timeline"));
-const Judges = lazy(() => import("./components/Judges"));
 const PrizePool = lazy(() => import("./components/PrizePool"));
 const GoodiesMerch = lazy(() => import("./components/GoodiesMerch"));
 const Sponsors = lazy(() => import("./components/Sponsors"));
@@ -147,7 +146,6 @@ function App() {
         <AboutUs />
         <Domains />
         <Timeline />
-        <Judges />
         <PrizePool />
         <GoodiesMerch />
         <Sponsors />

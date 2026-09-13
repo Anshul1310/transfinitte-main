@@ -56,7 +56,7 @@ const GoodiesMerchContent = () => (
                 Goodies &amp; Merch
               </h2>
               <span className="font-spacemono text-[0.65rem] leading-7 text-[#6B6B6B] dark:text-[#A1A1A1]">
-                (6)
+                (5)
               </span>
             </div>
             <p className="mt-3 max-w-xl font-spacemono text-xs leading-6 text-[#6B6B6B] dark:text-[#A1A1A1] sm:text-sm">
