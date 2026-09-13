@@ -60,22 +60,11 @@ const ImageGlider = () => {
           <span className="image-glider-index">{String(activeIndex + 1).padStart(2, "0")} / {String(images.length).padStart(2, "0")}</span>
         </div>
       <div className={`image-glider-frame ${isWiping ? "is-wiping" : ""}`}>
-        <div className="image-glider-scanbar" aria-hidden="true" />
-        {images.map((image, index) => (
-          <img
-            key={image.src}
-            src={image.src}
-            alt={image.alt}
-            className={`image-glider-slide ${index === activeIndex ? "is-active" : ""}`}
-            aria-hidden={index !== activeIndex}
-          />
-        ))}
-        <div className="image-glider-scanlines" aria-hidden="true" />
-        <div className="image-glider-vignette" aria-hidden="true" />
-        <span className="image-glider-bracket tl" aria-hidden="true" />
-        <span className="image-glider-bracket tr" aria-hidden="true" />
-        <span className="image-glider-bracket bl" aria-hidden="true" />
-        <span className="image-glider-bracket br" aria-hidden="true" />
+        <div className="image-glider-track" style={{ transform: `translateX(-${activeIndex * (100 / images.length)}%)` }}>
+          {images.map((image) => (
+            <img key={image.src} src={image.src} alt={image.alt} className="image-glider-slide" />
+          ))}
+        </div>
         <button type="button" className="image-glider-nav prev" onClick={() => { changeSlide(-1); pauseAuto(); }} aria-label="Previous archive image">&lsaquo;</button>
         <button type="button" className="image-glider-nav next" onClick={() => { changeSlide(1); pauseAuto(); }} aria-label="Next archive image">&rsaquo;</button>
       </div>
