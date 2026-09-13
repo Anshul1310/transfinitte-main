@@ -49,11 +49,11 @@ const ContactDialog = memo(() => (
                 Technical Council of NIT Trichy
               </div>
               <div className="self-stretch text-[#1D1D1F] dark:text-neutral-300 font-spacegrotesk text-[0.825rem] sm:text-[1.125rem] not-italic font-bold leading-normal tracking-[-0.011rem]">
-                Vaibhav <span className="font-light">9141050129</span>
+                Vaibhav :  <span className="font-light">+91 9141050129</span>
                 <br />
-                Ibrahim <span className="font-light">9384848353</span>
+                Ibrahim :  <span className="font-light">+91 9384848353</span>
                 <br />
-                Hrishidev <span className="font-light">9446048442</span>
+                Hrishidev :  <span className="font-light">+91 9446048442</span>
                 <br />
               </div>
               <div className="sm:hidden flex justify-center items-center w-full">
