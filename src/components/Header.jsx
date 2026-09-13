@@ -14,20 +14,37 @@ const Header = memo(() => {
     });
   };
 
-  const RegisterButton = ({ variant, className }) => (
-    <Button variant={variant} onClick={handleClick}>
-      <div
-        className={`flex flex-row gap-1 justify-center items-center bg-[#6B7FA3] text-white dark:bg-offwhite dark:text-[#1D1D1F] px-2 py-0 rounded-full hover:underline decoration-white dark:decoration-[#1D1D1F] transition-colors ${className}`}
-      >
-        <div className="text-center font-spacemono text-[0.875rem] not-italic font-bold leading-5 tracking-[0.35px] uppercase">
-          REGISTER
-        </div>
-        <div>
-          <img src={arrowwh} className="max-w-none w-fit dark:hidden" alt="arrow" />
-          <img src={arrowbl} className="max-w-none w-fit hidden dark:block" alt="arrow" />
-        </div>
-      </div>
-    </Button>
+ const RegisterButton = ({ variant, className }) => (
+  <Button
+    variant={variant}
+    onClick={handleClick}
+    className={`flex flex-row gap-1 justify-center items-center
+      bg-[#6B7FA3] text-white
+      dark:bg-offwhite dark:text-[#1D1D1F]
+      px-2 py-0 rounded-full
+      hover:underline
+      decoration-white dark:decoration-[#1D1D1F]
+      transition-colors
+      ${className}`}
+  >
+    <div className="text-center font-spacemono text-[0.875rem] not-italic font-bold leading-5 tracking-[0.35px] uppercase">
+      REGISTER
+    </div>
+
+    <div>
+      <img
+        src={arrowwh}
+        className="max-w-none w-fit dark:hidden"
+        alt="arrow"
+      />
+      <img
+        src={arrowbl}
+        className="max-w-none w-fit hidden dark:block"
+        alt="arrow"
+      />
+    </div>
+  </Button>
+)
   );
 
   const CalendarButton = () => (
