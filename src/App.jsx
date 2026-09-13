@@ -6,10 +6,11 @@ const Timer = lazy(() => import("./components/Timer"));
 const AboutUs = lazy(() => import("./components/AboutUs"));
 const Domains = lazy(() => import("./components/DomainsPrize"));
 const Timeline = lazy(() => import("./components/Timeline"));
-
+const Judges = lazy(() => import("./components/Judges"));
 const PrizePool = lazy(() => import("./components/PrizePool"));
 const GoodiesMerch = lazy(() => import("./components/GoodiesMerch"));
 const Sponsors = lazy(() => import("./components/Sponsors"));
+const Testimonials = lazy(() => import("./components/Testimonials"));
 const Faq = lazy(() => import("./components/Faq"));
 const Footer = lazy(() => import("./components/Footer"));
 const ImageGlider = lazy(() => import("./components/ImageGlider"));
@@ -146,9 +147,11 @@ function App() {
         <AboutUs />
         <Domains />
         <Timeline />
+        <Judges />
         <PrizePool />
         <GoodiesMerch />
         <Sponsors />
+        <Testimonials />
         <Faq />
         <Footer />
       </Suspense>

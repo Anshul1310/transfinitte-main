@@ -53,11 +53,12 @@ const ImageGlider = () => {
   };
 
   return (
-    <section className="image-glider" aria-label="TransfiNITTe visual archive">
-      <div className="image-glider-header">
-        <span>ARCHIVE / VISUAL</span>
-        <span className="image-glider-index">{String(activeIndex + 1).padStart(2, "0")} / {String(images.length).padStart(2, "0")}</span>
-      </div>
+    <div className="mx-auto max-w-[92%] md:max-w-[95%] xl:max-w-[93.194%] bg-[#FFFFFF] dark:bg-black border-l border-r border-l-edge border-r-edge transition-colors duration-300">
+      <section className="image-glider" aria-label="TransfiNITTe visual archive">
+        <div className="image-glider-header">
+          <span>ARCHIVE / VISUAL</span>
+          <span className="image-glider-index">{String(activeIndex + 1).padStart(2, "0")} / {String(images.length).padStart(2, "0")}</span>
+        </div>
       <div className={`image-glider-frame ${isWiping ? "is-wiping" : ""}`}>
         <div className="image-glider-scanbar" aria-hidden="true" />
         {images.map((image, index) => (
@@ -98,6 +99,7 @@ const ImageGlider = () => {
         <span>CLICK TICK TO JUMP</span>
       </div>
     </section>
+    </div>
   );
 };
 
