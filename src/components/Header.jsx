@@ -2,7 +2,6 @@ import React, { lazy, memo, Suspense } from "react";
 import { arrowbl, arrowwh, numbersvg, tfbadge } from "../assets";
 import { toast } from "sonner";
 import { Button } from "./ui/button";
-import ThemeToggle from "./ThemeToggle";
 import { GOOGLE_CALENDAR_URL } from "../constants";
 
 const Flip = lazy(() => import("./Flip"));
@@ -10,7 +9,7 @@ const Flip = lazy(() => import("./Flip"));
 const Header = memo(() => {
   const handleClick = () => {
     toast("Coming Soon", {
-      description: "Wednesday, 21 October 2026, 9:00 AM",
+      description: "Wednesday, 23 October 2026, 9:00 AM",
       className: "font-spacemono",
     });
   };
