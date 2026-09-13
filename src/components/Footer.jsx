@@ -24,7 +24,7 @@ const ContactDialog = memo(() => (
   <AlertDialog>
     <AlertDialogTrigger>
       <div className="flex flex-row gap-1 justify-center items-center">
-        <div className="text-[#1D1D1F] dark:text-black text-center font-spacemono text-[0.875rem] not-italic font-bold tracking-[0.35px] uppercase transition-colors">
+        <div className="text-[#1D1D1F] dark:text-offwhite text-center font-spacemono text-[0.875rem] not-italic font-bold tracking-[0.35px] uppercase transition-colors">
           Contact
         </div>
         <img src={arrowbl} className="w-auto h-2 dark:hidden" alt="arrow" />
@@ -85,7 +85,7 @@ const ContactDialog = memo(() => (
       <AlertDialogFooter>
         <AlertDialogAction>
           <div className="flex flex-row gap-1 justify-center items-center border-solid border-[#E6E6E3] dark:border-white/20 border-2 p-2 rounded-3xl px-5 footer-links py-[6px] sm:px-3">
-            <div className="text-[#1D1D1F] dark:text-offwhite text-center font-spacemono text-[0.875rem] not-italic font-bold leading-5 tracking-[0.35px] uppercase">
+            <div className="text-[#1D1D1F] dark:text-black text-center font-spacemono text-[0.875rem] not-italic font-bold leading-5 tracking-[0.35px] uppercase">
               Continue
             </div>
           </div>
