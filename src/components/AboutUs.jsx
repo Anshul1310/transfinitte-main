@@ -29,7 +29,7 @@ const AboutUsMobile = memo(() => (
             action.
             <br />
             <br />
-            Building on the success of TransfiNITTe'23, where 300+ participants
+            Building on the success of TransfiNITTe'25, where 300+ participants
             pushed the limits in a 42-hour coding marathon, we're taking it up a
             notch. With 500+ participants and 100+ teams expected,
             TransfiNITTe'26 is set to redefine the hackathon experience.

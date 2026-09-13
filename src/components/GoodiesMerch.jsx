@@ -25,7 +25,7 @@ export const goodies = [
 ];
 
 export const GoodieCard = memo(({ item }) => (
-  <article className="flex min-h-[260px] flex-1 flex-col justify-between rounded-[4px] border border-[#E1E6EB] bg-white p-5 transition-colors duration-300 dark:border-[#454545] dark:bg-[#0A0A0A] lg:p-6">
+  <article className="flex min-h-[260px] flex-1 flex-col justify-between rounded-[4px] border border-[#E2E8F0] bg-[#F8FAFC] p-5 transition-colors duration-300 dark:border-[#454545] dark:bg-[#0A0A0A] lg:p-6">
     <div className={`flex h-28 items-center justify-center rounded-[3px] text-6xl text-[#1D1D1F] dark:text-[#EDEDED] ${item.accent}`}>
       <span aria-hidden="true">{item.icon}</span>
     </div>
@@ -46,7 +46,7 @@ export const GoodieCard = memo(({ item }) => (
 ));
 
 const GoodiesMerchContent = () => (
-  <section id="goodies-merch" className="mx-auto max-w-[95%] bg-[#F3F6FA] transition-colors duration-300 dark:bg-black xl:max-w-[93.194%]">
+  <section id="goodies-merch" className="mx-auto max-w-[92%] md:max-w-[95%] bg-[#FFFFFF] transition-colors duration-300 dark:bg-black xl:max-w-[93.194%]">
     <div className="border-x border-r-edge border-l-edge px-4 py-10 sm:px-6 lg:px-[46px] lg:py-16">
       <div className="flex flex-col gap-8 lg:gap-10">
         <div className="flex items-start justify-between gap-5">
@@ -56,7 +56,7 @@ const GoodiesMerchContent = () => (
                 Goodies &amp; Merch
               </h2>
               <span className="font-spacemono text-[0.65rem] leading-7 text-[#6B6B6B] dark:text-[#A1A1A1]">
-                (3)
+                (5)
               </span>
             </div>
             <p className="mt-3 max-w-xl font-spacemono text-xs leading-6 text-[#6B6B6B] dark:text-[#A1A1A1] sm:text-sm">

@@ -26,7 +26,7 @@ const ReachMobile = memo(() => (
           Reach
         </div>
         <div className="flex w-auto h-auto flex-col justify-center font-spacemono text-[0.65rem] font-normal leading-[28px] text-[#6B6B6B] dark:text-[#A1A1A1] transition-colors">
-          (5)
+          (4)
         </div>
       </div>
 
@@ -67,7 +67,7 @@ const ReachDesktop = memo(() => (
           Reach
         </div>
         <div className="flex w-auto h-auto flex-col justify-center font-spacemono text-[0.65rem] font-normal leading-[28px] text-[#6B6B6B] dark:text-[#A1A1A1] transition-colors">
-          (5)
+          (4)
         </div>
       </div>
 
