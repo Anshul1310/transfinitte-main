@@ -18,7 +18,7 @@ const Flip = () => {
         // Return the calculated number of days
         return daysToGo;
       }
-      const targetDate = '2026-10-21';
+      const targetDate = '2026-10-23';
       const daysLeft = calculateDaysToGo(targetDate);
       const dateRef = useRef(null);
       const daysLeftRef = useRef(null);
@@ -68,7 +68,7 @@ const Flip = () => {
   return (
     <div>
         <div ref={dateRef} className='text-[#6B6B6B] dark:text-[#A1A1A1] font-spacemono text-sm font-normal leading-[17.5px] tracking-[0.35px] uppercase transition-colors'>
-        OCT 21-23 2026 | GJCH
+        OCT 23-25 2026 | GJCH
         </div>
         <div ref={daysLeftRef} className='text-[#6B6B6B] dark:text-[#A1A1A1] font-spacemono text-sm font-normal leading-[17.5px] tracking-[0.35px] uppercase transition-colors' style={{ display: 'none' }}>
             {`${daysLeft} days to go`}
