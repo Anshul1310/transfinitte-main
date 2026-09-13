@@ -17,7 +17,6 @@ const ImageGlider = lazy(() => import("./components/ImageGlider"));
 function LoadingScreen({ exiting = false }) {
   return (
     <div className={`loading-screen${exiting ? " exiting" : ""}`} aria-live="polite" aria-busy="true">
-      <div className="loading-title">Transfinitte 26</div>
     </div>
   );
 }
@@ -29,10 +28,10 @@ function App() {
   useEffect(() => {
     const exitTimer = setTimeout(() => {
       setLoaderExiting(true);
-    }, 5000);
+    }, 500);
     const removeTimer = setTimeout(() => {
       setShowLoader(false);
-    }, 5700);
+    }, 1200);
 
     return () => {
       clearTimeout(exitTimer);

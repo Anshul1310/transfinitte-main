@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { adwaith, anand, anirudh, ayush, mudit } from "../assets";
 
 const images = [
@@ -10,46 +10,21 @@ const images = [
 ];
 
 const ImageGlider = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [caption, setCaption] = useState("");
-  const [isWiping, setIsWiping] = useState(false);
-  const [autoState, setAutoState] = useState("ON");
-  const pauseTimer = useRef(null);
-
-  const goTo = (nextIndex) => {
-    if (nextIndex === activeIndex) return;
-    setIsWiping(false);
-    requestAnimationFrame(() => {
-      setIsWiping(true);
-      setActiveIndex(nextIndex);
-    });
-  };
-
-  const changeSlide = (direction) => {
-    goTo((activeIndex + direction + images.length) % images.length);
-  };
+  const [activeIndex, setActiveIndex] = useState(images.length);
+  const [isResetting, setIsResetting] = useState(false);
+  const slides = [...images, ...images, ...images];
 
   useEffect(() => {
-    setCaption("");
-    let characterIndex = 0;
-    const typeTimer = setInterval(() => {
-      characterIndex += 1;
-      setCaption(images[activeIndex].label.slice(0, characterIndex));
-      if (characterIndex >= images[activeIndex].label.length) clearInterval(typeTimer);
-    }, 16);
-
-    return () => clearInterval(typeTimer);
-  }, [activeIndex]);
-
-  useEffect(() => {
-    const timer = setInterval(() => changeSlide(1), 4200);
+    const timer = setInterval(() => setActiveIndex((index) => index + 1), 4200);
     return () => clearInterval(timer);
-  }, [activeIndex]);
+  }, []);
 
-  const pauseAuto = () => {
-    setAutoState("PAUSED");
-    clearTimeout(pauseTimer.current);
-    pauseTimer.current = setTimeout(() => setAutoState("ON"), 6000);
+  const resetLoop = () => {
+    if (activeIndex < images.length || activeIndex >= images.length * 2) {
+      setIsResetting(true);
+      setActiveIndex(images.length + (activeIndex % images.length));
+      requestAnimationFrame(() => setIsResetting(false));
+    }
   };
 
   return (
@@ -57,37 +32,20 @@ const ImageGlider = () => {
       <section className="image-glider" aria-label="TransfiNITTe visual archive">
         <div className="image-glider-header">
           <span>ARCHIVE / VISUAL</span>
-          <span className="image-glider-index">{String(activeIndex + 1).padStart(2, "0")} / {String(images.length).padStart(2, "0")}</span>
+          <span className="image-glider-index">{String(activeIndex % images.length + 1).padStart(2, "0")} / {String(images.length).padStart(2, "0")}</span>
         </div>
-      <div className={`image-glider-frame ${isWiping ? "is-wiping" : ""}`}>
-        <div className="image-glider-track" style={{ transform: `translateX(-${activeIndex * (100 / images.length)}%)` }}>
-          {images.map((image) => (
-            <img key={image.src} src={image.src} alt={image.alt} className="image-glider-slide" />
-          ))}
+        <div className="image-glider-frame">
+          <div
+            className={`image-glider-track${isResetting ? " is-resetting" : ""}`}
+            style={{ transform: `translateX(-${activeIndex * (100 / slides.length)}%)` }}
+            onTransitionEnd={resetLoop}
+          >
+            {slides.map((image, index) => (
+              <img key={`${image.src}-${index}`} src={image.src} alt={image.alt} className="image-glider-slide" />
+            ))}
+          </div>
         </div>
-        <button type="button" className="image-glider-nav prev" onClick={() => { changeSlide(-1); pauseAuto(); }} aria-label="Previous archive image">&lsaquo;</button>
-        <button type="button" className="image-glider-nav next" onClick={() => { changeSlide(1); pauseAuto(); }} aria-label="Next archive image">&rsaquo;</button>
-      </div>
-      <div className="image-glider-caption" aria-live="polite">
-        {caption}<span className="image-glider-cursor" aria-hidden="true" />
-      </div>
-      <div className="image-glider-ticks">
-          {images.map((image, index) => (
-            <button
-              key={image.src}
-              type="button"
-              className={`image-glider-tick ${index === activeIndex ? "is-active" : ""}`}
-              onClick={() => { goTo(index); pauseAuto(); }}
-              aria-label={`Show archive image ${index + 1}`}
-              aria-current={index === activeIndex ? "true" : undefined}
-            ><span /></button>
-          ))}
-      </div>
-      <div className="image-glider-footer">
-        <span>AUTO-CYCLE <strong>{autoState}</strong></span>
-        <span>CLICK TICK TO JUMP</span>
-      </div>
-    </section>
+      </section>
     </div>
   );
 };
