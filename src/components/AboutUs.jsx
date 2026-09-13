@@ -25,7 +25,7 @@ const AboutUsMobile = memo(() => (
         <div className="flex flex-col content-center items-center gap-3 flex-1 flex-shrink-0 basis-0 w-full">
           <div className="w-full h-auto text-[#6B6B6B] dark:text-[#A0A0A0] font-spacemono text-[0.875rem] text-justify leading-relaxed tracking-[0.4px] self-stretch transition-colors">
             Welcome to TransfiNITTe'26, NIT Trichy's premier hackathon, hosted
-            by the Technical Council and SCIENT. This is where innovation meets
+            by the Technical Council. This is where innovation meets
             action.
             <br />
             <br />
@@ -60,7 +60,7 @@ const AboutUsDesktop = memo(() => (
           </div>
           <div className="w-full h-auto text-[#6B6B6B] dark:text-[#A0A0A0] font-spacemono text-[0.95rem] lg:text-[1rem] leading-relaxed transition-colors">
             Welcome to TransfiNITTe'26, NIT Trichy's premier hackathon, hosted
-            by the Technical Council and SCIENT. This is where innovation meets
+            by the Technical Council. This is where innovation meets
             action.
             <br />
             <br />

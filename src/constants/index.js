@@ -349,22 +349,22 @@ export const venue = [
 
 export const GOOGLE_CALENDAR_URL = (() => {
   const title = encodeURIComponent("TransfiNITTe'26");
-  const dates = "20261020T130000Z/20261022T123000Z";
+  const dates = "20261023T130000Z/20261025T123000Z";
   const location = encodeURIComponent("NIT Trichy, Tamil Nadu, India");
   const details = encodeURIComponent(
-    `TransfiNITTe'26 Hackathon (Oct 20 - Oct 22, 2026)\n` +
+    `TransfiNITTe'26 Hackathon (Oct 23 - Oct 25, 2026)\n` +
       `Venue: NIT Trichy\n\n` +
-      `DAY 1 — Oct 20:\n` +
+      `DAY 1 — Oct 23:\n` +
       `• 06:30 PM - Inauguration\n` +
       `• 07:00 PM - Release of Problem Statements\n` +
       `• 07:30 PM - Hackathon Begins\n` +
       `• 08:30 PM - Dinner\n\n` +
-      `DAY 2 — Oct 21:\n` +
+      `DAY 2 — Oct 24:\n` +
       `• 08:30 AM - Breakfast\n` +
       `• 01:30 PM - Lunch\n` +
       `• 04:00 PM - Guidance by Judges\n` +
       `• 08:30 PM - Dinner\n\n` +
-      `DAY 3 — Oct 22:\n` +
+      `DAY 3 — Oct 25:\n` +
       `• 08:30 AM - Breakfast\n` +
       `• 09:00 AM - Guidance by Judges\n` +
       `• 01:30 PM - Lunch\n` +
