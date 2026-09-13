@@ -5,7 +5,7 @@ import { GOOGLE_CALENDAR_URL } from "../constants";
 
 const timelineData = [
   {
-    date: "Oct 20",
+    date: "Oct 21",
     day: "DAY-1",
     events: [
       { time: "06:30 PM", title: "Inauguration" },
@@ -15,7 +15,7 @@ const timelineData = [
     ],
   },
   {
-    date: "Oct 21",
+    date: "Oct 22",
     day: "DAY-2",
     events: [
       { time: "08:30 AM", title: "Breakfast" },
@@ -25,7 +25,7 @@ const timelineData = [
     ],
   },
   {
-    date: "Oct 22",
+    date: "Oct 23",
     day: "DAY-3",
     events: [
       { time: "08:30 AM", title: "Breakfast" },
