@@ -18,7 +18,7 @@ const Flip = () => {
         // Return the calculated number of days
         return daysToGo;
       }
-      const targetDate = '2026-10-23';
+      const targetDate = '2026-10-23T00:00:00+05:30';
       const daysLeft = calculateDaysToGo(targetDate);
       const dateRef = useRef(null);
       const daysLeftRef = useRef(null);
