@@ -142,10 +142,7 @@ const FooterMobile = memo(() => (
               href={ARCHIVE_URL}
               text="Archive"
             />
-            <FooterLink
-              href={GOOGLE_CALENDAR_URL}
-              text="Add to Calendar"
-            />
+
           </div>
         </div>
         <div className="flex justify-center items-start pt-2">

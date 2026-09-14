@@ -47,7 +47,7 @@ const Faq = () => {
   const isExpanded = visibleCount > BATCH_SIZE;
 
   const handleShowMore = () => {
-    setVisibleCount((prev) => Math.min(prev + BATCH_SIZE, faqs.length));
+   setVisibleCount(faqs.length);
   };
 
   const handleShowLess = () => {
