@@ -36,7 +36,7 @@ const DomainsMobile = memo(() => (
           Domains
         </div>
         <div className="flex w-auto h-auto flex-col justify-center font-spacemono text-[0.65rem] font-normal leading-[28px] text-[#6B6B6B] dark:text-[#A1A1A1] transition-colors">
-          ({domains.length})
+          (2)
         </div>
       </div>
       <Accordion type="multiple" className="flex flex-col gap-3 w-full">
@@ -57,7 +57,7 @@ const DomainsDesktop = memo(() => (
             Domains
           </div>
           <div className="flex w-auto h-auto flex-col justify-center font-spacemono text-[0.65rem] font-normal leading-[28px] text-[#6B6B6B] dark:text-[#A1A1A1] transition-colors">
-            ({domains.length})
+            (2)
           </div>
         </div>
         <Accordion type="multiple" className="grid grid-cols-2 gap-4 lg:gap-5 items-start w-full">
