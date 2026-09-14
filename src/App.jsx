@@ -4,6 +4,7 @@ const Header = lazy(() => import("./components/Header"));
 const Hero = lazy(() => import("./components/Hero"));
 const Timer = lazy(() => import("./components/Timer"));
 const AboutUs = lazy(() => import("./components/AboutUs"));
+const ImageGlider = lazy(() => import("./components/ImageGlider"));
 const Domains = lazy(() => import("./components/DomainsPrize"));
 const Timeline = lazy(() => import("./components/Timeline"));
 const PrizePool = lazy(() => import("./components/PrizePool"));
@@ -12,14 +13,12 @@ const Sponsors = lazy(() => import("./components/Sponsors"));
 const Testimonials = lazy(() => import("./components/Testimonials"));
 const Faq = lazy(() => import("./components/Faq"));
 const Footer = lazy(() => import("./components/Footer"));
-const ImageGlider = lazy(() => import("./components/ImageGlider"));
 
 function LoadingScreen({ exiting = false }) {
   return (
     <div className={`loading-screen${exiting ? " exiting" : ""}`} aria-live="polite" aria-busy="true">
     </div>
-  );
-}
+);
 
 function App() {
   const [showLoader, setShowLoader] = useState(true);
@@ -44,6 +43,7 @@ function App() {
       <Suspense fallback={<LoadingScreen />}>
         <Header />
         <Hero />
+        <AboutUs />
         <ImageGlider />
         <Timer />
         <AboutUs />
@@ -60,5 +60,5 @@ function App() {
     </>
   );
 }
-
+}
 export default App;

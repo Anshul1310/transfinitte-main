@@ -12,7 +12,6 @@ const reachData = [
     label: "Prize Pool",
     stats: [
       { heading: "Lakhs", value: "₹15+" },
-      { heading: "Equivalent", value: "$18K+" },
     ],
   },
 ];
