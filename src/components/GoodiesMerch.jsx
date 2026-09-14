@@ -9,15 +9,8 @@ export const goodies = [
     accent: "bg-[#DCE8FF] dark:bg-[#18243A]",
   },
   {
-    name: "Sticker Pack",
-    detail: "Laptop-ready hacker stickers",
-    status: "Free for registered students",
-    icon: "✺",
-    accent: "bg-[#FBE7D8] dark:bg-[#382318]",
-  },
-  {
-    name: "Developer Kit",
-    detail: "Badge, lanyard and goodies",
+    name: "Developer Swag Kit",
+    detail: "Badge, lanyard, laptop stickers & goodies",
     status: "Free for registered students",
     icon: "⌘",
     accent: "bg-[#E4F1DC] dark:bg-[#1E321A]",
@@ -71,7 +64,7 @@ const GoodiesMerchContent = () => (
           </span>
         </div>
 
-        <div className="grid gap-4 md:grid-cols-3 lg:gap-5">
+        <div className="grid gap-4 sm:grid-cols-2 lg:gap-5 max-w-3xl xl:max-w-4xl">
           {goodies.map((item) => (
             <GoodieCard key={item.name} item={item} />
           ))}
