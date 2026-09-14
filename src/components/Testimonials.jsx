@@ -16,6 +16,20 @@ const testimonials = [
     quote:
       "“TransfiNITTe was an incredible opportunity that stood out for its industry-related problem statements. Winning the hackathon was a truly encouraging milestone.”",
   },
+  {
+    id: "2",
+    team: "Five NITTs at Freddy's",
+    role: "PS by Optisol",
+    quote:
+      "“An event so good we couldn't miss it even when we had CTs. We overcame challenges, took turns pulling all nighters, wasted a lil time just talking, but overall, we had a lotta fun :)”",
+  },
+  {
+    id: "3",
+    team: "Binapple",
+    role: "PS by Zerowings",
+    quote:
+      "“My team and I applied at the last minute, but it turned out to be one of the most fun hackathons we’ve attended. From the goodies and great mentors to the awesome peers we met, we learned a lot and had a great time building together.”",
+  },
 ];
 
 const TestimonialsContent = memo(() => {

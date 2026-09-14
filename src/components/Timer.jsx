@@ -1,7 +1,7 @@
 import React, { memo, useEffect, useState } from "react";
 
-// Target: October 23, 2026, 00:00 AM IST (Asia/Kolkata, UTC+5:30)
-const TARGET_TIMESTAMP = new Date("2026-10-23T00:00:00+05:30").getTime();
+// Target: October 23, 2026, 6:30 PM IST (Asia/Kolkata, UTC+5:30)
+const TARGET_TIMESTAMP = new Date("2026-10-23T18:30:00+05:30").getTime();
 
 const calculateTimeLeft = () => {
   const now = Date.now();
