@@ -4,7 +4,6 @@ const Header = lazy(() => import("./components/Header"));
 const Hero = lazy(() => import("./components/Hero"));
 const Timer = lazy(() => import("./components/Timer"));
 const AboutUs = lazy(() => import("./components/AboutUs"));
-const ImageGlider = lazy(() => import("./components/ImageGlider"));
 const Domains = lazy(() => import("./components/DomainsPrize"));
 const Timeline = lazy(() => import("./components/Timeline"));
 const PrizePool = lazy(() => import("./components/PrizePool"));
@@ -49,7 +48,6 @@ function App() {
         <Header />
         <Hero />
         <AboutUs />
-        <ImageGlider />
         <Timer />
         <Domains />
         <Timeline />

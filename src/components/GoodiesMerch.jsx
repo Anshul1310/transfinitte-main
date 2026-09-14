@@ -4,21 +4,21 @@ export const goodies = [
   {
     name: "Transfinitte T-Shirt",
     detail: "Limited edition event tee",
-    price: "₹499",
+    status: "Coming Soon",
     icon: "✦",
     accent: "bg-[#DCE8FF] dark:bg-[#18243A]",
   },
   {
     name: "Sticker Pack",
     detail: "Laptop-ready hacker stickers",
-    price: "₹149",
+    status: "Free for registered students",
     icon: "✺",
     accent: "bg-[#FBE7D8] dark:bg-[#382318]",
   },
   {
     name: "Developer Kit",
     detail: "Badge, lanyard and goodies",
-    price: "₹299",
+    status: "Free for registered students",
     icon: "⌘",
     accent: "bg-[#E4F1DC] dark:bg-[#1E321A]",
   },
@@ -29,7 +29,7 @@ export const GoodieCard = memo(({ item }) => (
     <div className={`flex h-28 items-center justify-center rounded-[3px] text-6xl text-[#1D1D1F] dark:text-[#EDEDED] ${item.accent}`}>
       <span aria-hidden="true">{item.icon}</span>
     </div>
-    <div className="mt-5 flex items-end justify-between gap-4">
+    <div className="mt-5 flex flex-col justify-between flex-grow gap-4">
       <div>
         <h3 className="font-spacegrotesk text-xl font-normal text-[#1D1D1F] dark:text-[#EDEDED]">
           {item.name}
@@ -38,9 +38,11 @@ export const GoodieCard = memo(({ item }) => (
           {item.detail}
         </p>
       </div>
-      <span className="whitespace-nowrap font-spacegrotesk text-xl text-[#1D1D1F] dark:text-[#EDEDED]">
-        {item.price}
-      </span>
+      <div className="pt-3 border-t border-[#E2E8F0] dark:border-[#262626]">
+        <span className="inline-block rounded-full border border-[#D5DAE0] dark:border-[#404040] bg-[#E8ECF0]/70 dark:bg-[#1D1D1F] px-3 py-1 font-spacemono text-xs font-semibold text-[#1D1D1F] dark:text-[#EDEDED]">
+          {item.status}
+        </span>
+      </div>
     </div>
   </article>
 ));
