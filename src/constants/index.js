@@ -82,18 +82,26 @@ export const domains = [
   {
     id: "0",
     name: "Hardware",
+    explanation:
+      "Tackle challenges in embedded systems, IoT, robotics, and circuit design. Create innovative physical computing solutions, automate processes, and build prototypes that bridge digital logic with real-world interactions.",
   },
   {
     id: "1",
     name: "Software",
+    explanation:
+      "Architect and engineer modern software solutions spanning web platforms, mobile applications, distributed cloud systems, and AI/ML algorithms to solve complex real-world computing problems.",
   },
   {
     id: "2",
     name: "Management",
+    explanation:
+      "Develop data-driven operational frameworks, supply-chain strategies, resource management plans, and organizational workflows to optimize business efficiency, leadership, and execution.",
   },
   {
     id: "3",
     name: "Entrepreneurship",
+    explanation:
+      "Transform pioneering ideas into viable and scalable market ventures. Formulate business models, validate product-market fit, develop go-to-market strategies, and present compelling pitches for impactful solutions.",
   },
 ];
 
@@ -112,13 +120,11 @@ export const sponsors = [
         name: "Yamaha",
         imgurl: yamaha,
       },
-      ,
       {
         id: "2",
         name: "Geeks For Geeks",
         imgurl: geeks,
       },
-      ,
       {
         id: "3",
         name: "jcb",
@@ -376,3 +382,6 @@ export const GOOGLE_CALENDAR_URL = (() => {
 
   return `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${dates}&details=${details}&location=${location}&ctz=Asia/Kolkata`;
 })();
+
+export const ARCHIVE_URL =
+  "https://drive.google.com/file/d/1Nf1tIkY5nzyK4Gaf3ynV1qVcYnqaWZED/view?usp=drivesdk";

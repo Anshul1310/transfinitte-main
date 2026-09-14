@@ -1,15 +1,31 @@
 import React, { memo, Suspense } from "react";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import { domains } from "../constants";
 
 const DomainCard = memo(({ domain, index }) => (
-  <div className="flex items-center gap-2 sm:gap-3 rounded-lg border border-[#D5DAE0] dark:border-[#444] bg-[#E8ECF0] dark:bg-[#1D1D1F] px-3 py-3 sm:px-5 sm:py-4 md:px-6 md:py-5 transition-colors duration-300 hover:bg-[#D5DAE0] dark:hover:bg-[#2A2A2F] overflow-hidden">
-    <div className="font-spacegrotesk text-base font-bold leading-tight text-[#1D1D1F] dark:text-white sm:text-xl lg:text-2xl flex-shrink-0">
-      {String(index + 1).padStart(2, "0")}
-    </div>
-    <div className="font-spacegrotesk text-base font-bold leading-tight text-[#1D1D1F] dark:text-white sm:text-xl lg:text-2xl truncate">
-      {domain.name}
-    </div>
-  </div>
+  <AccordionItem
+    value={`domain-${domain.id}`}
+    className="rounded-lg border border-[#D5DAE0] dark:border-[#444] bg-[#E8ECF0] dark:bg-[#1D1D1F] px-4 py-1.5 sm:px-6 sm:py-2.5 transition-colors duration-300 hover:bg-[#D5DAE0]/70 dark:hover:bg-[#2A2A2F] overflow-hidden data-[state=open]:bg-[#D5DAE0]/50 dark:data-[state=open]:bg-[#242428]"
+  >
+    <AccordionTrigger className="flex items-center justify-between w-full py-2 sm:py-2.5 hover:no-underline text-[#1D1D1F] dark:text-white cursor-pointer [&>svg]:h-5 [&>svg]:w-5 sm:[&>svg]:h-6 sm:[&>svg]:w-6 [&>svg]:text-[#1D1D1F] dark:[&>svg]:text-white">
+      <div className="flex items-center gap-3 sm:gap-4 text-left">
+        <span className="font-spacegrotesk text-base font-bold leading-tight text-[#1D1D1F] dark:text-white sm:text-xl lg:text-2xl flex-shrink-0">
+          {String(index + 1).padStart(2, "0")}
+        </span>
+        <span className="font-spacegrotesk text-base font-bold leading-tight text-[#1D1D1F] dark:text-white sm:text-xl lg:text-2xl">
+          {domain.name}
+        </span>
+      </div>
+    </AccordionTrigger>
+    <AccordionContent className="pt-2 pb-4 text-[#6B6B6B] dark:text-[#A0A0A0] font-spacemono text-sm sm:text-base leading-relaxed border-t border-[#1D1D1F]/10 dark:border-white/10 mt-1 select-text">
+      {domain.explanation}
+    </AccordionContent>
+  </AccordionItem>
 ));
 
 const DomainsMobile = memo(() => (
@@ -20,14 +36,14 @@ const DomainsMobile = memo(() => (
           Domains
         </div>
         <div className="flex w-auto h-auto flex-col justify-center font-spacemono text-[0.65rem] font-normal leading-[28px] text-[#6B6B6B] dark:text-[#A1A1A1] transition-colors">
-          (2)
+          ({domains.length})
         </div>
       </div>
-      <div className="grid grid-cols-2 gap-3">
+      <Accordion type="multiple" className="flex flex-col gap-3 w-full">
         {domains.map((domain, index) => (
           <DomainCard key={domain.id} domain={domain} index={index} />
         ))}
-      </div>
+      </Accordion>
     </div>
   </div>
 ));
@@ -41,14 +57,14 @@ const DomainsDesktop = memo(() => (
             Domains
           </div>
           <div className="flex w-auto h-auto flex-col justify-center font-spacemono text-[0.65rem] font-normal leading-[28px] text-[#6B6B6B] dark:text-[#A1A1A1] transition-colors">
-            (2)
+            ({domains.length})
           </div>
         </div>
-        <div className="grid grid-cols-2 gap-4 lg:gap-5">
+        <Accordion type="multiple" className="grid grid-cols-2 gap-4 lg:gap-5 items-start w-full">
           {domains.map((domain, index) => (
             <DomainCard key={domain.id} domain={domain} index={index} />
           ))}
-        </div>
+        </Accordion>
       </div>
     </div>
   </div>

@@ -18,75 +18,92 @@ import {
   AlertDialogHeader,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
-import { GOOGLE_CALENDAR_URL } from "../constants";
+import { GOOGLE_CALENDAR_URL, ARCHIVE_URL } from "../constants";
 
 const ContactDialog = memo(() => (
   <AlertDialog>
     <AlertDialogTrigger>
       <div className="flex flex-row gap-1 justify-center items-center">
         <div className="text-[#1D1D1F] dark:text-offwhite text-center font-spacemono text-[0.875rem] not-italic font-bold tracking-[0.35px] uppercase transition-colors">
-          Contact
+          Contact Us
         </div>
         <img src={arrowbl} className="w-auto h-2 dark:hidden" alt="arrow" />
         <img src={arrowwh} className="w-auto h-2 hidden dark:block" alt="arrow" />
       </div>
     </AlertDialogTrigger>
-    <AlertDialogContent className="w-auto max-w-[90%] sm:max-w-max opacity-100 bg-[#FFFFFF] dark:bg-neutral-900 border border-[#E6E6E3] dark:border-neutral-800 rounded-3xl">
+    <AlertDialogContent className="w-auto max-w-[92%] sm:max-w-lg opacity-100 bg-[#FFFFFF] dark:bg-neutral-900 border border-[#E6E6E3] dark:border-neutral-800 rounded-3xl px-4 py-5 sm:p-7">
       <AlertDialogHeader>
         <AlertDialogDescription>
-          <div className="flex flex-col items-center gap-4 self-stretch sm:p-4">
-            <div className="self-stretch text-[#1D1D1F] dark:text-white font-spacemono text-[2rem] not-italic font-medium leading-[-0.02rem]">
-              Contact
+          <div className="flex flex-col items-start gap-4 sm:gap-5 self-stretch">
+            <div className="self-stretch text-[#1D1D1F] dark:text-white font-spacemono text-[1.75rem] sm:text-[2rem] not-italic font-medium leading-none">
+              Contact Us
             </div>
-            <div className="flex flex-col items-start gap-[6px] self-stretch">
-              <div className="self-stretch text-[#1D1D1F] dark:text-neutral-200 font-spacemono text-[1rem] sm:text-[1.5rem] not-italic font-light leading-[-0.015rem]">
-                Work inquires:{" "}
-                <span className="font-bold text-wrap">
-                  technicalcouncil@pragyan.org
-                </span>
-              </div>
-              <div className="self-stretch text-[#1D1D1F] dark:text-neutral-100 font-spacemono text-[0.825rem] sm:text-[1.125rem] not-italic font-bold leading-normal tracking-[-0.011rem]">
+
+            {/* Email / Inquiries section */}
+            <div className="flex flex-col items-start gap-2 self-stretch py-3 px-3.5 sm:px-4 sm:py-3.5 rounded-2xl bg-[#F5F7FA] dark:bg-neutral-800/70 border border-[#E2E6EA] dark:border-neutral-700/60 my-1 transition-colors">
+              <span className="text-[#6B6B6B] dark:text-[#A1A1A1] font-spacemono text-xs sm:text-sm font-semibold tracking-wider uppercase">
+                Work Inquiries
+              </span>
+              <a
+                href="mailto:technicalcouncil.nitt.work@gmail.com"
+                className="text-[#1D1D1F] dark:text-offwhite hover:text-[#6B7FA3] dark:hover:text-white font-spacemono text-[11.5px] min-[370px]:text-xs min-[410px]:text-sm sm:text-base md:text-[1.05rem] font-bold hover:underline transition-colors tracking-tight sm:tracking-normal select-text"
+              >
+                <span className="inline-block">technicalcouncil.nitt.</span>
+                <wbr />
+                <span className="inline-block">work@gmail.com</span>
+              </a>
+            </div>
+
+            {/* Council & Coordinators */}
+            <div className="flex flex-col items-start gap-2.5 self-stretch">
+              <div className="self-stretch text-[#1D1D1F] dark:text-neutral-100 font-spacemono text-[0.95rem] sm:text-[1.125rem] not-italic font-bold leading-normal tracking-[-0.011rem]">
                 Technical Council of NIT Trichy
               </div>
-              <div className="self-stretch text-[#1D1D1F] dark:text-neutral-300 font-spacegrotesk text-[0.825rem] sm:text-[1.125rem] not-italic font-bold leading-normal tracking-[-0.011rem]">
-                Vaibhav :  <span className="font-light">+91 9141050129</span>
-                <br />
-                Ibrahim :  <span className="font-light">+91 9384848353</span>
-                <br />
-                Hrishidev :  <span className="font-light">+91 9446048442</span>
-                <br />
-              </div>
-              <div className="sm:hidden flex justify-center items-center w-full">
-                <div className="flex items-center justify-center gap-3">
-                  <div className="flex w-fit justify-center items-start gap-3">
-                    <a
-                      href="https://www.instagram.com/tc_nitt/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <img src={instagram} className="max-w-none w-fit" alt="Instagram" />
-                    </a>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <a
-                      href="https://in.linkedin.com/company/technical-council-nit-trichy"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <img src={linkedin} className="max-w-none w-fit" alt="LinkedIn" />
-                    </a>
-                  </div>
+              <div className="self-stretch text-[#1D1D1F] dark:text-neutral-300 font-spacegrotesk text-[0.875rem] sm:text-[1rem] leading-relaxed flex flex-col gap-2">
+                <div className="flex justify-between items-center sm:justify-start sm:gap-4">
+                  <span className="font-semibold">Vaibhav :</span>
+                  <span className="font-light font-spacemono text-[#4A4A4A] dark:text-neutral-300">+91 9141050129</span>
                 </div>
+                <div className="flex justify-between items-center sm:justify-start sm:gap-4">
+                  <span className="font-semibold">Ibrahim :</span>
+                  <span className="font-light font-spacemono text-[#4A4A4A] dark:text-neutral-300">+91 9384848353</span>
+                </div>
+                <div className="flex justify-between items-center sm:justify-start sm:gap-4">
+                  <span className="font-semibold">Hrishidev :</span>
+                  <span className="font-light font-spacemono text-[#4A4A4A] dark:text-neutral-300">+91 9446048442</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Social links on mobile */}
+            <div className="sm:hidden flex justify-center items-center w-full pt-1">
+              <div className="flex items-center justify-center gap-4">
+                <a
+                  href="https://www.instagram.com/tc_nitt/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2 rounded-full border border-[#E6E6E3] dark:border-neutral-800"
+                >
+                  <img src={instagram} className="max-w-none w-5 h-5" alt="Instagram" />
+                </a>
+                <a
+                  href="https://in.linkedin.com/company/technical-council-nit-trichy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2 rounded-full border border-[#E6E6E3] dark:border-neutral-800"
+                >
+                  <img src={linkedin} className="max-w-none w-5 h-5" alt="LinkedIn" />
+                </a>
               </div>
             </div>
           </div>
         </AlertDialogDescription>
       </AlertDialogHeader>
-      <AlertDialogFooter>
+      <AlertDialogFooter className="pt-2">
         <AlertDialogAction>
-          <div className="flex flex-row gap-1 justify-center items-center border-solid border-[#E6E6E3] dark:border-white/20 border-2 p-2 rounded-3xl px-5 footer-links py-[6px] sm:px-3">
+          <div className="flex flex-row gap-1 justify-center items-center border-solid border-[#E6E6E3] dark:border-white/20 border-2 p-2 rounded-3xl px-5 footer-links py-[6px] sm:px-4">
             <div className="text-[#1D1D1F] dark:text-black text-center font-spacemono text-[0.875rem] not-italic font-bold leading-5 tracking-[0.35px] uppercase">
-              Continue
+              Close
             </div>
           </div>
         </AlertDialogAction>
@@ -122,8 +139,8 @@ const FooterMobile = memo(() => (
               <ContactDialog />
             </div>
             <FooterLink
-              href="https://maps.app.goo.gl/oqqeVqML8Fb2Pdr57"
-              text="Locate Us"
+              href={ARCHIVE_URL}
+              text="Archive"
             />
             <FooterLink
               href={GOOGLE_CALENDAR_URL}
@@ -179,8 +196,8 @@ const FooterDesktop = memo(() => (
             <ContactDialog />
           </div>
           <FooterLink
-            href="https://maps.app.goo.gl/oqqeVqML8Fb2Pdr57"
-            text="Locate Us"
+            href={ARCHIVE_URL}
+            text="Archive"
           />
    
           <FooterLink

@@ -1,17 +1,60 @@
-const RegisterButton = ({ className }) => (
-  <Button onClick={handleClick} className={`!flex !h-auto !w-auto !flex-row !items-center !justify-center !gap-1 !rounded-full !border-0 !bg-[#6B7FA3] !px-3 !py-1 !shadow-none !text-white hover:!bg-[#6B7FA3] hover:!text-white dark:!bg-offwhite dark:!text-[#1D1D1F] dark:hover:!bg-offwhite dark:hover:!text-[#1D1D1F] 
-  ${className || ""}`} > 
-    <span className="text-center font-spacemono text-[0.875rem] not-italic font-bold leading-5 tracking-[0.35px] uppercase"> 
-      REGISTER </span> <span className="flex items-center"> <img src={arrowwh} className="max-w-none w-fit dark:hidden" alt="arrow" /> 
-    <img src={arrowbl} className="max-w-none w-fit hidden dark:block" alt="arrow" /> 
+import React, { lazy, memo, Suspense } from "react";
+import { arrowbl, arrowwh, numbersvg, tfbadge } from "../assets";
+import { toast } from "sonner";
+import { Button } from "./ui/button";
+import { GOOGLE_CALENDAR_URL } from "../constants";
+
+const Flip = lazy(() => import("./Flip"));
+
+const Header = memo(() => {
+  const handleClick = () => {
+    toast("Coming Soon", {
+      description: "Wednesday, 23 October 2026, 9:00 AM",
+      className: "font-spacemono",
+    });
+  };
+
+  const RegisterButton = ({ className }) => (
+    <Button
+      onClick={handleClick}
+      className={`!flex !h-auto !w-auto !flex-row !items-center !justify-center !gap-1 !rounded-full !border-0 !bg-[#6B7FA3] !px-3 !py-1 !shadow-none !text-white hover:!bg-[#6B7FA3] hover:!text-white dark:!bg-offwhite dark:!text-[#1D1D1F] dark:hover:!bg-offwhite dark:hover:!text-[#1D1D1F] ${className || ""}`}
+    >
+      <span className="text-center font-spacemono text-[0.875rem] not-italic font-bold leading-5 tracking-[0.35px] uppercase">
+        REGISTER
       </span>
-  </Button> 
-); 
-const CalendarButton = () => 
-  ( 
-    <a href={GOOGLE_CALENDAR_URL} target="_blank" rel="noopener noreferrer" className="hover:underline decoration-[#1D1D1F] dark:decoration-white" > 
+      <span className="flex items-center">
+        <img
+          src={arrowwh}
+          className="max-w-none w-fit dark:hidden"
+          alt="arrow"
+        />
+        <img
+          src={arrowbl}
+          className="max-w-none w-fit hidden dark:block"
+          alt="arrow"
+        />
+      </span>
+    </Button>
+  );
+
+  const CalendarButton = () => (
+    <a
+      href={GOOGLE_CALENDAR_URL}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="hover:underline decoration-[#1D1D1F] dark:decoration-white"
+    >
       <button className="flex flex-row gap-1 justify-center items-center">
-        <div className="text-[#1D1D1F] dark:text-offwhite text-center font-spacemono text-[0.875rem] not-italic font-bold leading-5 tracking-[0.35px] uppercase"> ADD TO CALENDAR </div> <div> <img src={arrowbl} className="max-w-none w-fit dark:hidden" alt="arrow" /> <img src={arrowwh} className="max-w-none w-fit hidden dark:block" alt="arrow" /> </div> </button> </a> );
+        <div className="text-[#1D1D1F] dark:text-offwhite text-center font-spacemono text-[0.875rem] not-italic font-bold leading-5 tracking-[0.35px] uppercase">
+          ADD TO CALENDAR
+        </div>
+        <div>
+          <img src={arrowbl} className="max-w-none w-fit dark:hidden" alt="arrow" />
+          <img src={arrowwh} className="max-w-none w-fit hidden dark:block" alt="arrow" />
+        </div>
+      </button>
+    </a>
+  );
 
   const HeaderMobile = memo(() => (
     <div className="block md:hidden relative">
@@ -20,8 +63,7 @@ const CalendarButton = () =>
           <img src={tfbadge} alt="Transfinitte Badge" className="dark:invert-0 invert transition-all w-auto h-5 sm:h-6" />
         </Suspense>
         <div className="flex items-center gap-2.5 sm:gap-3">
-      
-      <RegisterButton className="text-xs sm:text-sm" />
+          <RegisterButton className="text-xs sm:text-sm" />
         </div>
       </div>
     </div>
@@ -46,7 +88,8 @@ const CalendarButton = () =>
       </div>
       <div className="w-fit h-fit flex gap-3 lg:gap-6 justify-center items-center">
         <CalendarButton />
-<RegisterButton className="px-4 lg:px-5 py-2" />      </div>
+        <RegisterButton className="px-4 lg:px-5 py-2" />
+      </div>
     </div>
   ));
 
