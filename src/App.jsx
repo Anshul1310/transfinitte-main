@@ -16,9 +16,13 @@ const Footer = lazy(() => import("./components/Footer"));
 
 function LoadingScreen({ exiting = false }) {
   return (
-    <div className={`loading-screen${exiting ? " exiting" : ""}`} aria-live="polite" aria-busy="true">
-    </div>
-);
+    <div
+      className={`loading-screen${exiting ? " exiting" : ""}`}
+      aria-live="polite"
+      aria-busy="true"
+    ></div>
+  );
+}
 
 function App() {
   const [showLoader, setShowLoader] = useState(true);
@@ -28,6 +32,7 @@ function App() {
     const exitTimer = setTimeout(() => {
       setLoaderExiting(true);
     }, 500);
+
     const removeTimer = setTimeout(() => {
       setShowLoader(false);
     }, 1200);
@@ -46,7 +51,6 @@ function App() {
         <AboutUs />
         <ImageGlider />
         <Timer />
-        <AboutUs />
         <Domains />
         <Timeline />
         <PrizePool />
@@ -56,9 +60,10 @@ function App() {
         <Faq />
         <Footer />
       </Suspense>
+
       {showLoader && <LoadingScreen exiting={loaderExiting} />}
     </>
   );
 }
-}
+
 export default App;
