@@ -30,6 +30,13 @@ const testimonials = [
     quote:
       "“My team and I applied at the last minute, but it turned out to be one of the most fun hackathons we’ve attended. From the goodies and great mentors to the awesome peers we met, we learned a lot and had a great time building together.”",
   },
+  {
+    id: "4",
+    team: "Doodledrool",
+    role: "PS by BHEL",
+    quote:
+      "“Participating in Transfinite’25 gave our team valuable exposure to real world Materials Engineering challenges. Working on a problem statement from BHEL helped us apply our technical knowledge to practical industrial problems, while strengthening our problem solving and analytical skills. It was an enriching industry oriented learning experience.”",
+  },
 ];
 
 const TestimonialsContent = memo(() => {
