@@ -8,10 +8,11 @@ const Flip = lazy(() => import("./Flip"));
 
 const Header = memo(() => {
   const handleClick = () => {
-    toast("Coming Soon", {
-      description: "Wednesday, 23 October 2026, 9:00 AM",
-      className: "font-spacemono",
-    });
+    // toast("Coming Soon", {
+    //   description: "Wednesday, 23 October 2026, 9:00 AM",
+    //   className: "font-spacemono",
+    // });
+    window.open("https://register.transfinitte.org/", "_blank");
   };
 
   const RegisterButton = ({ className }) => (
