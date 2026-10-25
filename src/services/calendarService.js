@@ -7,6 +7,9 @@ const API_KEY = import.meta.env.VITE_GOOGLE_CALENDAR_API_KEY || "";
  */
 export async function fetchCalendarNotifications() {
   if (!CALENDAR_ID || !API_KEY) {
+    console.warn(
+      "[Calendar Notifications] Missing credentials. Please check VITE_GOOGLE_CALENDAR_ID and VITE_GOOGLE_CALENDAR_API_KEY in .env"
+    );
     return [];
   }
 
@@ -21,6 +24,7 @@ export async function fetchCalendarNotifications() {
     }
 
     const data = await response.json();
+    console.log(`[Calendar Notifications] Connected. Found ${data.items?.length || 0} event(s).`);
     if (!data.items || data.items.length === 0) {
       return [];
     }

@@ -39,6 +39,7 @@ import instagram from './svg/instagram.svg'
 import instagramwh from './svg/instagramwh.svg'
 import linkedin from './svg/linkedin.svg'
 import linkedinwh from './svg/linkedinwh.svg'
+import d2d from './svg/d2d-logo.png'
 
 
 export {
@@ -79,4 +80,5 @@ export {
     tfbadge,
     bcg,
     bhel,
+    d2d
     };

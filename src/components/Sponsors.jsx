@@ -9,7 +9,7 @@ const SponsorCategory = memo(({ category }) => (
     <div className="text-[#1D1D1F] dark:text-offwhite font-spacegrotesk text-xl sm:text-2xl lg:text-[2rem] not-italic font-normal leading-8 transition-colors">
       {category.name}
     </div>
-    <div className="flex flex-wrap items-center justify-center sm:justify-around gap-6 sm:gap-8 lg:gap-10 self-stretch">
+    <div className="flex flex-wrap items-center justify-center sm:flex-start gap-6 sm:gap-8 lg:gap-10 self-stretch">
       {category.data.map((sponsor) => (
         <div
           key={sponsor.id}
@@ -34,7 +34,7 @@ const SponsorsMobile = memo(() => (
           Sponsors
         </div>
         <div className="flex w-auto h-auto flex-col justify-center text-[#6B6B6B] dark:text-[#A1A1A1] font-spacemono text-[18px] not-italic font-normal leading-[28px] transition-colors">
-          (6)
+          (9)
         </div>
       </div>
       {sponsors.map((category) => (
@@ -52,7 +52,7 @@ const SponsorsDesktop = memo(() => (
           Sponsors
         </div>
         <div className="flex w-auto h-auto flex-col justify-center text-[#6B6B6B] dark:text-[#A1A1A1] font-medium not-italic font-spacemono leading-[28px] transition-colors">
-          (6)
+          (9)
         </div>
       </div>
       {sponsors.map((category) => (

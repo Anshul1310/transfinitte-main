@@ -46,7 +46,7 @@ const Header = memo(() => {
       rel="noopener noreferrer"
       className="hover:underline decoration-[#1D1D1F] dark:decoration-white"
     >
-      <button className="flex flex-row gap-1 justify-center items-center">
+      <div className="flex flex-row gap-1 justify-center items-center cursor-pointer">
         <div className="text-[#1D1D1F] dark:text-offwhite text-center font-spacemono text-[0.875rem] not-italic font-bold leading-5 tracking-[0.35px] uppercase">
           ADD TO CALENDAR
         </div>
@@ -54,7 +54,7 @@ const Header = memo(() => {
           <img src={arrowbl} className="max-w-none w-fit dark:hidden" alt="arrow" />
           <img src={arrowwh} className="max-w-none w-fit hidden dark:block" alt="arrow" />
         </div>
-      </button>
+      </div>
     </a>
   );
 
